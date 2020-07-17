@@ -26,7 +26,7 @@ RUN apt-get update \
     # Install PHP libraries
     && apt-get install -y apache2 php php-cli php-mbstring php-curl \
     	php-xml php-bcmath php-intl php-zip php-mysql php-json php-imagick php-gd php-memcached php-memcache \
-    	libapache2-mod-php newrelic-php5 php7.2-dev php-pear phpunit libz-dev \
+    	libapache2-mod-php php7.2-dev php-pear phpunit libz-dev \
     	libfontenc1 x11-common xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils fontconfig libxrender1 \
 	# wkhtmltopdf
 	&& wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -P /tmp \
