@@ -29,8 +29,8 @@ RUN apt-get update \
     	libapache2-mod-php php7.2-dev php-pear phpunit libz-dev \
     	libfontenc1 x11-common xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils fontconfig libxrender1 \
 	# wkhtmltopdf
-	&& wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_arm64.deb -P /tmp \
-	&& dpkg -i /tmp/wkhtmltox_0.12.6-1.bionic_arm64.deb\
+	&& wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb -P /tmp \
+	&& dpkg -i /tmp/wkhtmltox_0.12.6-1.bionic_amd64.deb \
     # Apache settings
     && cp /dev/null ${APACHE_CONF_DIR}/conf-available/other-vhosts-access-log.conf \
     && a2enmod rewrite \
@@ -50,7 +50,7 @@ RUN apt-get update \
     && apt-get autoremove -y && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/pear \
-    && rm -rf /tmp/wkhtmltox_0.12.6-1.bionic_arm64.deb \
+    && rm -rf /tmp/wkhtmltox_0.12.6-1.bionic_amd64.deb \
     # Forward request and error logs to docker log collector
     && ln -sf /dev/stdout /var/log/apache2/access.log \
     && ln -sf /dev/stderr /var/log/apache2/error.log \
