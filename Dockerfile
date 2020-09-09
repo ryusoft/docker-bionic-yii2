@@ -27,7 +27,7 @@ RUN apt-get update \
     && apt-get install -y apache2 php php-cli php-mbstring php-curl \
     	php-xml php-bcmath php-intl php-zip php-mysql php-pgsql php-json php-imagick php-gd php-memcached php-memcache \
     	libapache2-mod-php php7.2-dev php-pear phpunit libz-dev composer \
-    	libfontenc1 x11-common xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils fontconfig libxrender1 \
+    	libfontenc1 x11-common xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils fontconfig libxrender1 composer \
 	# wkhtmltopdf
 	&& wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb -P /tmp \
 	&& dpkg -i /tmp/wkhtmltox_0.12.6-1.bionic_amd64.deb \
